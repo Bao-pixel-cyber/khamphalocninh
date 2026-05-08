@@ -1,0 +1,625 @@
+```html id="khamphalocninh_pro"
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Khám Phá Lộc Ninh</title>
+
+<!-- TỰ ĐỘNG KIỂM TRA LỖI -->
+
+<script>
+
+/* CHỐNG LỖI TỰ RESET */
+
+window.addEventListener("beforeunload", function () {
+    localStorage.setItem("scrollY", window.scrollY);
+});
+
+window.addEventListener("load", function () {
+
+    let savedY = localStorage.getItem("scrollY");
+
+    if(savedY){
+        window.scrollTo(0, savedY);
+    }
+
+});
+
+/* KIỂM TRA ẢNH */
+
+function fixImage(img){
+
+    img.src =
+    "https://via.placeholder.com/700x350?text=Khong+Tai+Duoc+Anh";
+
+}
+
+/* TỰ ĐỘNG KIỂM TRA CODE */
+
+window.onerror = function(message){
+
+    console.log("Đã phát hiện lỗi: " + message);
+
+    return true;
+
+};
+
+</script>
+
+<style>
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+
+body{
+    font-family:Arial, sans-serif;
+    background:white;
+    color:black;
+    line-height:1.8;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+    text-align:center;
+    padding:60px 20px;
+    border-bottom:2px solid #ddd;
+    background:white;
+}
+
+header h1{
+    font-size:58px;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:22px;
+}
+
+/* LINK */
+
+.main-link{
+    margin-top:30px;
+}
+
+.main-link a{
+    text-decoration:none;
+    background:black;
+    color:white;
+    padding:16px 35px;
+    border-radius:12px;
+    font-size:22px;
+    transition:0.3s;
+    display:inline-block;
+}
+
+.main-link a:hover{
+    background:#444;
+    transform:scale(1.05);
+}
+
+/* MENU */
+
+nav{
+    background:#f5f5f5;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:999;
+    border-bottom:1px solid #ddd;
+}
+
+nav a{
+    text-decoration:none;
+    color:black;
+    margin:0 15px;
+    font-weight:bold;
+    font-size:18px;
+}
+
+nav a:hover{
+    color:gray;
+}
+
+/* SECTION */
+
+section{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    padding:60px 0;
+}
+
+/* TITLE */
+
+h2{
+    font-size:40px;
+    margin-bottom:30px;
+    border-left:7px solid black;
+    padding-left:15px;
+}
+
+/* CARD */
+
+.card{
+    background:white;
+    border:1px solid #ddd;
+    border-radius:18px;
+    padding:30px;
+    margin-bottom:35px;
+    box-shadow:0 5px 14px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+    gap:30px;
+}
+
+/* IMAGE */
+
+.place img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:20px;
+    filter:brightness(1.08);
+}
+
+/* TEXT */
+
+h3{
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+ul{
+    padding-left:22px;
+}
+
+li{
+    margin-bottom:12px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#f5f5f5;
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #ddd;
+    margin-top:40px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:38px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+
+    h3{
+        font-size:24px;
+    }
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>KHÁM PHÁ LỘC NINH</h1>
+
+    <p>
+        Website giới thiệu thiên nhiên, lịch sử và văn hóa của Lộc Ninh
+    </p>
+
+    <!-- LINK -->
+
+    <div class="main-link">
+
+
+<div class="main-link">
+
+    <a href="#gioithieu" id="mainButton">
+
+        Khám Phá Lộc Ninh
+
+    </a>
+
+</div>
+
+            Khám Phá Lộc Ninh
+
+        </a>
+
+    </div>
+
+</header>
+
+<!-- MENU -->
+
+<nav>
+
+    <a href="#gioithieu">Giới thiệu</a>
+    <a href="#phantich">Phân tích</a>
+    <a href="#xathitran">Xã & Thị trấn</a>
+    <a href="#dulich">Du lịch</a>
+
+</nav>
+
+<!-- GIỚI THIỆU -->
+
+<section id="gioithieu">
+
+    <h2>1. Giới thiệu về Lộc Ninh</h2>
+
+    <div class="card">
+
+        <p>
+            Lộc Ninh thuộc tỉnh Bình Phước,
+            nằm gần biên giới Campuchia.
+            Đây là khu vực nổi tiếng với lịch sử kháng chiến,
+            rừng cao su rộng lớn
+            và văn hóa dân tộc S'tiêng.
+        </p>
+
+        <br>
+
+        <p>
+            Hiện nay,
+            Lộc Ninh đang phát triển mạnh về du lịch,
+            nông nghiệp và du lịch sinh thái.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- PHÂN TÍCH -->
+
+<section id="phantich">
+
+    <h2>2. Phân tích đặc điểm nổi bật và bất lợi</h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>🌟 Đặc điểm nổi bật</h3>
+
+            <ul>
+
+                <li>Không khí trong lành</li>
+                <li>Nhiều rừng cao su đẹp</li>
+                <li>Có giá trị lịch sử lớn</li>
+                <li>Đất đỏ bazan màu mỡ</li>
+                <li>Thiên nhiên yên bình</li>
+                <li>Văn hóa dân tộc đặc sắc</li>
+
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h3>⚠️ Bất lợi</h3>
+
+            <ul>
+
+                <li>Ít trung tâm giải trí hiện đại</li>
+                <li>Giao thông vài nơi còn hạn chế</li>
+                <li>Du lịch chưa phát triển mạnh</li>
+                <li>Mùa khô khá nóng</li>
+                <li>Thiếu nhiều trung tâm thương mại lớn</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- XÃ VÀ THỊ TRẤN -->
+
+<section id="xathitran">
+
+    <h2>3. Giới thiệu các xã và thị trấn</h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>📍 Trước đây</h3>
+
+            <ul>
+
+                <li>Thị trấn Lộc Ninh</li>
+                <li>Xã Lộc Thái</li>
+                <li>Xã Lộc Hòa</li>
+                <li>Xã Lộc Quang</li>
+                <li>Xã Lộc Hiệp</li>
+                <li>Xã Lộc Thiện</li>
+
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h3>📍 Hiện nay</h3>
+
+            <p>
+                Các xã và thị trấn hiện nay
+                đang được nâng cấp mạnh về giao thông,
+                giáo dục và du lịch.
+            </p>
+
+            <br>
+
+            <p>
+                Thị trấn Lộc Ninh trở thành trung tâm phát triển
+                kinh tế và thương mại của khu vực.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DU LỊCH -->
+
+<section id="dulich">
+
+    <h2>4. Các khu du lịch nổi bật</h2>
+
+    <div class="grid">
+
+        <!-- TÀ THIẾT -->
+
+        <div class="card place">
+
+            <img
+            src="https://th.bing.com/th/id/OIP.MsNlTT8iWTUvAAEbAJS4JwHaEL?w=305&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+            alt="Căn cứ Tà Thiết"
+            onerror="fixImage(this)">
+
+            <h3>Căn cứ Tà Thiết</h3>
+
+            <p>
+                Đây là di tích lịch sử nổi tiếng
+                trong thời kỳ kháng chiến chống Mỹ.
+            </p>
+
+            <br>
+
+            <p><b>Đặc điểm chuyên sâu:</b></p>
+
+            <ul>
+
+                <li>Nhiều cây xanh và không gian rộng</li>
+                <li>Có giá trị lịch sử quân sự lớn</li>
+                <li>Công trình phục dựng chân thực</li>
+                <li>Phù hợp học tập lịch sử</li>
+
+            </ul>
+
+            <br>
+
+            <p><b>Tình trạng hiện nay:</b></p>
+
+            <p>
+                Khu di tích được bảo tồn tốt,
+                sạch sẽ và thường xuyên được nâng cấp.
+            </p>
+
+        </div>
+
+        <!-- SÓC BOM BO -->
+
+        <div class="card place">
+
+            <img
+            src="https://th.bing.com/th/id/OIP.4bl27Hx6ifV6ORn8aN6QBAHaEy?w=245&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+            alt="Sóc Bom Bo"
+            onerror="fixImage(this)">
+
+            <h3>Sóc Bom Bo</h3>
+
+            <p>
+                Sóc Bom Bo nổi tiếng với văn hóa dân tộc S'tiêng.
+            </p>
+
+            <br>
+
+            <p><b>Đặc điểm chuyên sâu:</b></p>
+
+            <ul>
+
+                <li>Kiến trúc mang bản sắc dân tộc</li>
+                <li>Văn hóa cồng chiêng đặc sắc</li>
+                <li>Nhiều lễ hội truyền thống</li>
+                <li>Giữ nét văn hóa lâu đời</li>
+
+            </ul>
+
+            <br>
+
+            <p><b>Tình trạng hiện nay:</b></p>
+
+            <p>
+                Khu du lịch đang được phát triển mạnh
+                để bảo tồn văn hóa dân tộc.
+            </p>
+
+        </div>
+
+        <!-- RỪNG CAO SU -->
+
+        <div class="card place">
+
+            <img
+            src="https://locninhrubber.vn/images/b/locninhrubber-tungchau.jpg"
+            alt="Rừng cao su"
+            onerror="fixImage(this)">
+
+            <h3>Rừng Cao Su Lộc Ninh</h3>
+
+            <p>
+                Đây là hình ảnh đặc trưng của Lộc Ninh,
+                tạo nên vẻ đẹp thiên nhiên xanh mát.
+            </p>
+
+            <br>
+
+            <p><b>Đặc điểm chuyên sâu:</b></p>
+
+            <ul>
+
+                <li>Những hàng cây thẳng tắp đẹp mắt</li>
+                <li>Không khí trong lành</li>
+                <li>Đẹp vào mùa thay lá</li>
+                <li>Phù hợp chụp ảnh và du lịch sinh thái</li>
+
+            </ul>
+
+            <br>
+
+            <p><b>Tình trạng hiện nay:</b></p>
+
+            <p>
+                Các rừng cao su vẫn được chăm sóc
+                và khai thác thường xuyên.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        Website Khám Phá Lộc Ninh | HTML & CSS
+    </p>
+
+</footer>
+<script>
+
+/* WEBSITE ĐÃ HOẠT ĐỘNG */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    console.log("Website Khám Phá Lộc Ninh đã hoạt động!");
+
+});
+
+/* KIỂM TRA LINK */
+
+document.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", function(){
+
+        console.log("Đang mở link:", this.href);
+
+    });
+
+});
+
+/* KIỂM TRA ẢNH */
+
+document.querySelectorAll("img").forEach(img => {
+
+    img.onerror = function(){
+
+        this.src =
+        "https://via.placeholder.com/700x350?text=Khong+Tai+Duoc+Anh";
+
+    };
+
+});
+
+/* CHỐNG RESET */
+
+window.addEventListener("beforeunload", () => {
+
+    localStorage.setItem("scrollPosition", window.scrollY);
+
+});
+
+window.addEventListener("load", () => {
+
+    let position = localStorage.getItem("scrollPosition");
+
+    if(position){
+
+        window.scrollTo(0, position);
+
+    }
+
+});
+
+/* TỰ KIỂM TRA LỖI */
+
+window.onerror = function(msg, url, line){
+
+    console.log(
+        "Lỗi: " + msg +
+        " | File: " + url +
+        " | Dòng: " + line
+    );
+
+    return true;
+
+};
+
+</script>
+</body>
+</html>
+```
